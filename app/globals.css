@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+main {
+  position: relative;
+  top: 127px;
+  min-height:100vh;
+}
+
+.active {
+  color: #fbfbfb
+}
+
+.non-active {
+  color: #989ca1
+}
+
+.animate-div {
+  animation-name: animateBtn;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: running;
+}
+
+.animate-div:hover {
+  background: radial-gradient(30% 50% at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+@keyframes animateBtn {
+  0% { left: 0px; top: 0px; }
+  16% { left: 70px; top: 0px; }
+  23% { left: 80px; top: 15px; }
+  30% { left: 70px; top: 30px; }
+  50% { left: 0px; top: 30px; }
+  66% { left: -70px; top: 30px; }
+  73% { left: -80px; top: 15px; }
+  80% { left: -70px; top: 0px; }
+  100% { left: 0px; top: 0px; }
+}
+
+@media (max-width:768px) {
+  main {
+    position: relative;
+    top: 60px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  header > div {
+    width: 100%;
+    padding: 10px 5px;
+  }
+}
+#moving-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Set your line height */
+  background-color: red; /* Set your line color */
+  border-radius: 1px; /* Optional: make the line ends rounded */
+  animation: moveLine 4s linear infinite;
+}
+
+@keyframes moveLine {
+  0%, 25% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+  50% {
+    top: 100%;
+    left: 0;
+    width: 2px;
+    transform: rotate(90deg);
+  }
+  75% {
+    top: 100%;
+    left: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 0;
+    left: 100%;
+    width: 2px;
+    transform: rotate(270deg);
+  }
+}
+
+/* .shadow-right {
+  position: relative;
+}
+
+
+
+.shadow-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  bottom: 0;
+  width: 40px; /* Adjust the width of the shadow as needed */
+  /* border-radius: 0 28px 28px 0; 
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.12)); /* Adjust the shadow color and transparency as needed */
+ 
+
+  .animation{
+    transition: 4s ease;
+  }

@@ -1,0 +1,133 @@
+"use client"
+
+import { useState, useEffect, useRef, MutableRefObject } from "react"
+import { createWeb3Modal, defaultConfig, useWeb3Modal, useWeb3ModalAccount } from '@web3modal/ethers5/react'
+import { metadata, mainnet, projectId } from './../context/web3'
+
+createWeb3Modal({
+  ethersConfig: defaultConfig({ metadata }),
+  chains: [mainnet],
+  projectId
+})
+
+export default function Lpstake() {
+  const [style, setStyle] = useState({
+    background: 'radial-gradient(40% 50% at 50% 20%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)',
+    filter: 'blur(15px)',
+    zIndex: '10'
+  })
+
+  const [temp,] = useState(Array(2))
+
+  const handleMouseover = (e: any) => {
+    temp[0] = e.target.offsetLeft;
+    temp[1] = e.target.offsetTop;
+    const xdif = 0 - temp[0];
+    const ydif = 0 - temp[1];
+
+    const style: any = {
+      // background: 'radial-gradient(60% 60% at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)', 
+      filter: 'blur(15px)',
+      zIndex: '10',
+      animationPlayState: 'paused',
+      transform: `translate(${xdif}px, ${ydif}px) scale(1.8, 1.2)`,
+      transition: 'transform 2s, background 2s linear 2s'
+    }
+    setStyle(style)
+  }
+
+  const handleMouseLeave = (e: any) => {
+    const style = {
+      background: 'radial-gradient(30% 50% at 50% 40%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)',
+      filter: 'blur(15px)',
+      zIndex: '10',
+      animationPlayState: 'running',
+      transition: 'transform 2s'
+    }
+    setStyle(style)
+  }
+  const { open } = useWeb3Modal()
+  const { address = '', chainId, isConnected } = useWeb3ModalAccount()
+  const reducedAddress = (_address = "") => {
+    return _address.slice(0, 5) + "..." + _address?.slice(_address.length - 5)
+  }
+  return (
+    <main>
+      <div className='flex justify-center pt-20 pb-40 sm:pb-0 '>
+        <div className="w-[332px]  rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md mb-28">
+
+          <div className="flex justify-between pl-[26px] pr-[18px] pt-[20px] pb-[5px] border-b-[1px] border-[#9A9BA11C]">
+            <div className="text-white text-[26px] ">LP Stake</div>
+            <div className="text-[#9b9ca1] pt-[7px]">
+              <div className="text-[18px] leading-[25px]  ">Block-WETH</div>
+              <div className="flex justify-end text-[16px]">$65.22</div>
+            </div>
+          </div>
+
+
+
+          <div className="p-[18px] pt-[17px]">
+
+
+
+            <div className="flex justify-between text-[#9b9ca1] pb-[8px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4px]">Current LP Staked</div>
+              <div className="align-top flex-row items-end ">
+                <div className="text-white text-[23px] font-normal leading-[32.2px] tracking-[.1px]">63.527</div>
+                <div className=" leading-[22.4px] mr-0 text-right">$4,143.23</div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div className="flex justify-between text-[#9b9ca1] pb-[8px] mt-[17px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4px]">LP Available to Stake</div>
+              <div className="align-top flex-row items-end ">
+                <div className="text-white text-[23px] font-normal leading-[32.2px] tracking-[.1px]">24.321</div>
+                <div className=" leading-[22.4px] mr-0 text-right">$1,586.21</div>
+              </div>
+            </div>
+
+
+            <div className="flex justify-between text-[#9b9ca1] pb-[8px] mt-[17px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4px]">ETH Earnings</div>
+              <div className="align-top flex-row items-end ">
+                <div className= "text-[#33c6ab]  text-[23px] font-normal leading-[32.2px] tracking-[.1px] text-end">1.779</div>
+                <div className=" leading-[22.4px] mr-0 text-right">$3,182.63</div>
+              </div>
+            </div>
+
+
+            <div className="pl-[3px] pt-[7px] text-start"><span className="text-[12px] text-[#9b9ca1] ">unStaking before unlock incurs a early withdraw fee</span></div>
+            <div className="flex flex-row justify-between mt-[12px]">
+              <div>
+                <p className="text-xs text-[#9b9ca1] text-center mb-[5px]">Locks for 4 days</p>
+                <p className='w-[135px] text-[#fbfbfb] py-[12px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>Stake</p>
+              </div>
+              <div>
+                <p className="text-xs text-[#9b9ca1] text-center mb-[5px]">01:06:25:06</p>
+                <p className='w-[135px] text-[#fbfbfb] py-[12px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>unStake</p>
+              </div>
+            </div>
+            <div className="flex relative mt-[17px]  w-[294px] h-[62px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
+              <div className="absolute w-[294px] bg-[#FFFFFF0D] rounded-[188px] h-[62px]" style={{ zIndex: '5' }}></div>
+              <div
+                className="absolute w-[292px] h-[40px] animate-div"
+                style={style}
+                onMouseOver={(e) => handleMouseover(e)}
+                onMouseLeave={(e) => handleMouseLeave(e)}></div>
+
+              <div className="absolute w-[290px] h-[58px] p-[2px] z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
+
+
+              <p className="relative text-[18px] text-[#33c6ab] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  )
+}
