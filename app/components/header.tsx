@@ -58,8 +58,8 @@ export default function Header() {
             <div 
                 className={
                     isOpen ? 
-                        `h-[100vh] transition-height duration-700 ease-linear w-[100vw] sm:w-auto justify-between px-5 md:px-10 py-4 flex border border-[#161616] bg-[#0F0F0F]` : 
-                        'flex h-[84px]  transition-all duration-700 md:h-[92px] w-[100vw] sm:w-auto justify-between  px-5 md:px-10 py-4 border border-[#161616] backdrop-blur-[9.5px]'}>
+                        `h-[100vh] transition-height duration-700 ease-linear w-[100vw] sm:w-auto items-center justify-between px-5 md:px-10 py-4 flex border border-[#161616] bg-[#0F0F0F]` : 
+                        'flex h-[84px]  transition-all duration-700 md:h-[92px] w-[100vw] sm:w-auto items-center justify-between  px-5 md:px-10 py-4 border border-[#161616] backdrop-blur-[9.5px]'}>
                 <div className='logo opacity-80' style={logoStyle}>
                     <Image
                         width={123}
