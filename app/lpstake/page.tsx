@@ -31,7 +31,7 @@ export default function Lpstake() {
       zIndex: '10',
       animationPlayState: 'paused',
       transform: `translate(${xdif}px, ${ydif}px) scale(1.8, 1.2)`,
-      transition: 'transform 0.5s, background 2s linear 2s'
+      transition: 'transform 1.2s, background 2s linear 2s'
     }
     setStyle(style)
   }
@@ -42,7 +42,7 @@ export default function Lpstake() {
       filter: 'blur(15px)',
       zIndex: '10',
       animationPlayState: 'running',
-      transition: 'transform 1s'
+      transition: 'transform 1.2s'
     }
     setStyle(style)
   }
@@ -64,8 +64,8 @@ export default function Lpstake() {
       filter: 'blur(5px)',
       zIndex: '10',
       animationPlayState: 'paused',
-
-      transition: 'transform 0.5s, background 2s linear 2s'
+      transform: `translate(${xdif2}px, ${ydif2}px) scale(1.8, 1.2)`,
+      transition: 'transform 1.2s, background 2s linear 2s'
     }
     setStyle2(style2)
   }
@@ -76,7 +76,7 @@ export default function Lpstake() {
       filter: 'blur(5px)',
       zIndex: '10',
       animationPlayState: 'running',
-      transition: 'transform 2s'
+      transition: 'transform 1.2s'
     }
     setStyle2(style2)
   }
@@ -90,7 +90,7 @@ export default function Lpstake() {
       <div className='flex justify-center pt-20 pb-40 sm:pb-0 '>
         <div className="w-[330px]  rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md mb-28">
 
-          <div className="flex justify-between pl-[26px] pr-[18px] pt-[20px] pb-[5px] border-b-[1px] border-[#9A9BA11C]">
+          <div className="flex justify-between pl-[26px] pr-[16px] pt-[20px] pb-[5px] border-b-[1px] border-[#9A9BA11C]">
             <div className="text-white text-[26px] ">LP Stake</div>
             <div className="text-[#9b9ca1] pt-[7px]">
               <div className="text-[18px] leading-[25px]  ">Block-WETH</div>
@@ -100,7 +100,7 @@ export default function Lpstake() {
 
 
 
-          <div className="p-[18px] pt-[17px]">
+          <div className="p-[17px] pt-[17px]">
 
 
 
@@ -146,8 +146,7 @@ export default function Lpstake() {
                 <p className='w-[135px] text-[#fbfbfb] py-[12px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>unStake</p>
               </div>
             </div>
-            <div className="flex relative mt-[17px]  w-[294px] h-[62px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()} onMouseOver={(e) => handleMouseover2(e)}
-              onMouseLeave={(e) => handleMouseLeave2()}>
+            <div className="flex relative mt-[17px]  w-[294px] h-[62px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
               <div className="absolute w-[294px]  overflow-hidden rounded-[188px] h-[59px] " style={{ zIndex: '5' }}>
                 <div className="relative" >
                   <div
@@ -161,8 +160,8 @@ export default function Lpstake() {
               <div
                 className="absolute w-[292px] h-[40px] animate-div"
                 style={style}
-                onMouseOver={(e) => handleMouseover(e)}
-                onMouseLeave={(e) => handleMouseLeave()}></div>
+                onMouseOver={(e) => { handleMouseover(e); handleMouseover2(e); }}
+                onMouseLeave={(e) => { handleMouseLeave(); handleMouseLeave2() }}></div>
 
               <div className="absolute w-[290px] h-[58px] p-[2px] z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
 

@@ -57,12 +57,12 @@ export default function Header() {
                 className={
                     isOpen ?
                         `transition-all duration-500 ease h-[100vh] w-[100vw] sm:w-auto justify-center px-5 md:px-10 py-[0px] md:py-[2px] flex border border-[#161616] bg-[#0F0F0F] ` :
-                        'transition-all duration-500 flex h-[83px] md:h-[92px] w-[100vw] sm:w-auto justify-between  px-5 md:px-10 py-[0px] md:py-[2px] border border-[#161616] backdrop-blur-[9.5px]'}>
+                        'transition-all duration-500 flex h-[83px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-10 py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
                 <div
                     className={
                         isOpen ?
-                            `transition-all duration-500 h-[83px] flex justify-between  items-center w-[100vw]  xs:px-[10vw] sm:px-[30vw] ` :
-                            'transition-all  duration-500 h-[83px] flex justify-between  items-center  w-[100vw] '}>
+                            `transition-all duration-500  h-[82px] md:h-[91px] flex justify-between  items-center w-[100vw]  xs:px-[10vw] sm:px-[30vw] ` :
+                            'transition-all  duration-500  h-[83px] md:h-[91px] flex justify-between  items-center  w-[100vw] '}>
 
                     <div className='logo opacity-80 transition-all duration-500' style={logoStyle}>
                         <Image

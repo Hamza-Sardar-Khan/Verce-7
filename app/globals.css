@@ -86,3 +86,8 @@ main {
     padding: 10px 5px;
   }
 }
+#custom{
+  background-size: 95%;
+  background-position: left;
+  background-repeat: no-repeat;
+}

@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#0f0f0f] bg-[url('/back_img.svg')] bg-contain bg-center lg:bg-cover lg:bg-left-top  bg-no-repeat">
+      <body className="bg-[#0f0f0f] bg-[url('/back_img.svg')] bg-contain bg-center lg:bg-cover lg:bg-left-top  bg-no-repeat" id='custom'>
         <Header />
         <div>
         {children}
