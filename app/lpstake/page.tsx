@@ -160,7 +160,7 @@ export default function Lpstake() {
               <div className="absolute w-[289px] h-[55px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
 
 
-              <p className="relative text-[18px] group-hover:text-white duration-500 text-[#B0B0B0] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
+              <p className="relative text-[18px] group-hover:text-white duration-[1.2s] text-[#B0B0B0] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
             </div>
           </div>
         </div>
