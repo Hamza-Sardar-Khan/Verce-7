@@ -140,9 +140,9 @@ export default function Lpstake() {
                 <p className='w-[135px] text-[#fbfbfb] py-[11.9px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>unStake</p>
               </div>
             </div>
-            <div className="flex relative mt-[15px]  w-[294px] h-[63px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
+            <div className="group flex relative mt-[15px]  w-[294px] h-[63px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
               <div className="absolute w-[294px]  overflow-hidden rounded-[188px] h-[59px]  border-[1px] border-[#303030]" style={{ zIndex: '5' }}>
-                <div className="relative" >
+                <div className="relative " >
                   <div
                     className="absolute w-[184px] h-[40px] ml-[75px] mt-1 animate-div"
                     style={style2}
@@ -152,7 +152,7 @@ export default function Lpstake() {
                 </div>
               </div>
               <div
-                className="absolute w-[292px] h-[40px] animate-div"
+                className=" absolute w-[292px] h-[40px] animate-div"
                 style={style}
                 onMouseOver={(e) => { handleMouseover(e); handleMouseover2(e); }}
                 onMouseLeave={(e) => { handleMouseLeave(); handleMouseLeave2() }}></div>
@@ -160,7 +160,7 @@ export default function Lpstake() {
               <div className="absolute w-[289px] h-[55px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
 
 
-              <p className="relative text-[18px] text-[#B0B0B0] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
+              <p className="relative text-[18px] group-hover:text-white duration-500 text-[#B0B0B0] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
             </div>
           </div>
         </div>

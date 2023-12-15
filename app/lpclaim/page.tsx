@@ -33,7 +33,7 @@ export default function Lpclaim() {
       zIndex: '10',
       animationPlayState: 'paused',
       transform: `translate(${xdif}px, ${ydif}px) scale(2, 1.7)`,
-      transition: 'transform 0.5s, background 0.5s linear 0.5s'
+      transition: 'transform 1.2s, background 2s linear 2s'
     }
     setStyle(style)
   }
@@ -44,7 +44,7 @@ export default function Lpclaim() {
       filter: 'blur(15px)',
       zIndex: '10',
       animationPlayState: 'running',
-      transition: 'transform 0.5s'
+      transition: 'transform 1.2s'
     }
     setStyle(style)
   }
@@ -67,7 +67,7 @@ export default function Lpclaim() {
       zIndex: '10',
       animationPlayState: 'paused',
       transform: `translate(${xdif2}px, ${ydif2}px) scale(3.8, 5.8)`,
-      transition: 'transform 1s, background 2s linear 2s'
+      transition: 'transform 1.2s, background 2s linear 2s'
     }
     setStyle2(style2)
   }
@@ -78,7 +78,7 @@ export default function Lpclaim() {
       filter: 'blur(5px)',
       zIndex: '10',
       animationPlayState: 'running',
-      transition: 'transform 2s'
+      transition: 'transform 1.2s'
     }
     setStyle2(style2)
   }
@@ -123,7 +123,7 @@ export default function Lpclaim() {
 
 
 
-            <div className="flex relative mt-[34px]  w-[294px] h-[56px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}  >
+            <div className="group flex relative mt-[34px]  w-[294px] h-[56px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}  >
               <div className="absolute w-[294px]  overflow-hidden rounded-[188px] h-[56px] pb-1 border-[1px] border-[#303030]" style={{ zIndex: '5' }}>
                 <div className="relative" >
                   <div
@@ -145,7 +145,7 @@ export default function Lpclaim() {
               </div>
 
               <div className="absolute w-[290px] h-[50px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
-              <p className="relative  text-[18px] text-[#B0B0B0]  font-medium  z-30 pointer-events-none tracking-[.2px]" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Connect Wallet"}</p>
+              <p className="relative  text-[18px]  group-hover:text-white duration-500 text-[#B0B0B0]  font-medium  z-30 pointer-events-none tracking-[.2px]" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Connect Wallet"}</p>
             </div>
           </div>
         </div>
