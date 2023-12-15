@@ -57,27 +57,29 @@ export default function Header() {
                 className={
                     isOpen ?
                         `transition-all duration-500 ease h-[100vh] w-[100vw] sm:w-auto justify-center px-5 md:px-10 py-[0px] md:py-[2px] flex border border-[#161616] bg-[#0F0F0F] ` :
-                        'transition-all duration-500 flex h-[83px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-10 py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
+                        'transition-all duration-500 flex h-[82px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-[40px] py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
                 <div
                     className={
                         isOpen ?
                             `transition-all duration-500  h-[82px] md:h-[91px] flex justify-between  items-center w-[100vw]  xs:px-[10vw] sm:px-[30vw] ` :
-                            'transition-all  duration-500  h-[83px] md:h-[91px] flex justify-between  items-center  w-[100vw] '}>
+                            'transition-all  duration-500  h-[82px] md:h-[89.5px] flex justify-between  items-center  w-[100vw] '}>
 
-                    <div className='logo opacity-80 transition-all duration-500' style={logoStyle}>
-                        <Image
-                            width={123}
-                            height={32}
-                            src={'link.svg'}
-                            alt='link'
-                        />
-                    </div>
-                    <div className='justify-between gap-6 hidden md:flex '>
+                    <a href="/">
+                        <div className='logo opacity-80 transition-all duration-500 cursor-pointer' style={logoStyle}>
+                            <Image
+                                width={124}
+                                height={33}
+                                src={'link.svg'}
+                                alt='link'
+                            />
+                        </div>
+                    </a>
+                    <div className='justify-between gap-[24px] hidden md:flex '>
                         <Link href="/lpclaim" className={pathname == '/lpclaim' ? 'active' : 'non-active'}>LP Claim</Link>
-                        <Link href="/lpstake" className={pathname == '/lpstake' ? 'active' : 'non-active'}>LP Stake</Link>
+                        <Link href="/lpstake" className={pathname == '/lpstake' ? 'active pr-[1px]' : 'non-active pr-[1px]'}>LP Stake</Link>
                     </div>
                     <div className='connect-btn '>
-                        <p className='text-[#fbfbfb] px-5 py-[9px]  md:px-6 md:py-[13px] bg-[#1F1F1F] border-[1.4px] border-[#3B3B3B] rounded-[64px] cursor-pointer  hover:bg-[#303030] duration-300 ' onClick={() => open()}>{isConnected ? reducedAddress(address) : "Connect"}</p>
+                        <p className='text-[#fbfbfb] px-[19.2px] py-[8.7px]  md:px-[23px] md:py-[13px] bg-[#1F1F1F] border-[1.4px] border-[#3B3B3B] rounded-[64px] cursor-pointer  hover:bg-[#303030] duration-300 tracking-[0.15px]' onClick={() => open()}>{isConnected ? reducedAddress(address) : "Connect"}</p>
                     </div>
                     <div className='md:hidden burger-btn '>
                         <button onClick={handleClick} className="w-[40px] h-[40px] rounded-xl bg-white flex flex-col justify-center items-center">
@@ -108,8 +110,8 @@ export default function Header() {
                 {
                     isOpen ?
                         <div className='relative right-[0px] flex flex-col w-[100vw] items-start px-5  text-2xl text-[#fbfbfb] mt-[46px] '>
-                            <Link href="/lpclaim" className={`py-[29px] pb-[24px] + ${pathname == '/lpclaim' ? 'active' : 'non-active'}`} onClick={() => navigateTo('/lpclaim')}>LP Claim</Link>
-                            <Link href="/lpstake" className={` + ${pathname == '/lpstake' ? 'active' : 'non-active'}`} onClick={() => navigateTo('/lpstake')}>LP Stake</Link>
+                            <Link href="/lpclaim" className={`py-[29px] pb-[26px] tracing-[0.5px] font-[500]+ ${pathname == '/lpclaim' ? 'active' : 'non-active'}`} onClick={() => navigateTo('/lpclaim')}>LP Claim</Link>
+                            <Link href="/lpstake" className={`tracing-[0.5px] font-[500] + ${pathname == '/lpstake' ? 'active' : 'non-active'}`} onClick={() => navigateTo('/lpstake')}>LP Stake</Link>
                         </div>
                         : null
                 }

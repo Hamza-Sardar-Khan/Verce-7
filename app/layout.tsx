@@ -4,7 +4,7 @@ import Header from './components/header'
 import './globals.css'
 import "@fontsource/dm-sans";
 // import './utils/utils'
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata: Metadata = {
   title: 'BlockPool',
@@ -18,9 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#0f0f0f] bg-[url('/back_img.svg')] bg-contain bg-center lg:bg-cover lg:bg-left-top  bg-no-repeat" id='custom'>
+      <body className="bg-[#0f0f0f] " >
         <Header />
-        <div>
+        <div className=" bg-contain   bg-center sm:bg-top  bg-no-repeat" id='custom' style={{backgroundImage: "url('/back_img.png')",
+      backgroundPosition: '-10px 38px'
+      }}>
         {children}
         </div>
        

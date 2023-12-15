@@ -64,7 +64,7 @@ export default function Lpstake() {
       filter: 'blur(5px)',
       zIndex: '10',
       animationPlayState: 'paused',
-      transform: `translate(${xdif2}px, ${ydif2}px) scale(1.8, 1.2)`,
+      transform: `translate(${xdif2}px, ${ydif2}px) scale(1.8, 5.2)`,
       transition: 'transform 1.2s, background 2s linear 2s'
     }
     setStyle2(style2)
@@ -86,71 +86,65 @@ export default function Lpstake() {
     return _address.slice(0, 5) + "..." + _address?.slice(_address.length - 5)
   }
   return (
-    <main>
+    <main className="top-[64px]">
       <div className='flex justify-center pt-20 pb-40 sm:pb-0 '>
         <div className="w-[330px]  rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md mb-28">
 
-          <div className="flex justify-between pl-[26px] pr-[16px] pt-[20px] pb-[5px] border-b-[1px] border-[#9A9BA11C]">
-            <div className="text-white text-[26px] ">LP Stake</div>
-            <div className="text-[#9b9ca1] pt-[7px]">
-              <div className="text-[18px] leading-[25px]  ">Block-WETH</div>
+        <div className="flex justify-between pl-[18px] pr-[16px] pt-[19.7px] pb-[4.3px] border-b-[1px] border-[#9A9BA11C]">
+            <div className="text-white text-[26px] pl-[7px] ">LP Stake</div>
+            <div className="text-[#9b9ca1] pt-[9px] ">
+              <div className="text-[18px] leading-[24.2px] ">Block-WETH</div>
               <div className="flex justify-end text-[16px]">$65.22</div>
             </div>
           </div>
 
 
 
-          <div className="p-[17px] pt-[17px]">
+          <div className="p-[17px] pl-[18px] pr-[15.6px] ">
 
 
 
-            <div className="flex justify-between text-[#9b9ca1] pb-[8px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
-              <div className="pt-[4px]">Current LP Staked</div>
-              <div className="align-top flex-row items-end ">
-                <div className="text-white text-[23px] font-normal leading-[32.2px] tracking-[.1px]">63.527</div>
+            <div className="flex justify-between text-[#9b9ca1] pb-[8px] pr-[9px] pt-[6px] pl-[13.5px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4.5px]">Current LP Staked</div>
+              <div className="align-top flex-row items-end pt-[0.5px] pr-[0.9px]">
+                <div className="text-white text-[23px] font-normal leading-[32.5px] ">63.527</div>
                 <div className=" leading-[22.4px] mr-0 text-right">$4,143.23</div>
               </div>
             </div>
 
-
-
-
-
-
-            <div className="flex justify-between text-[#9b9ca1] pb-[8px] mt-[17px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
-              <div className="pt-[4px]">LP Available to Stake</div>
-              <div className="align-top flex-row items-end ">
-                <div className="text-white text-[23px] font-normal leading-[32.2px] tracking-[.1px]">24.321</div>
+            <div className="flex justify-between text-[#9b9ca1] mt-[17px] pb-[8px] pr-[9px] pt-[6px] pl-[13.5px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4.5px]">LP Available to Stake</div>
+              <div className="align-top flex-row items-end pt-[0.5px] pr-[0.9px]">
+                <div className="text-white text-[23px] font-normal leading-[32.5px] ">24.321</div>
                 <div className=" leading-[22.4px] mr-0 text-right">$1,586.21</div>
               </div>
             </div>
 
-
-            <div className="flex justify-between text-[#9b9ca1] pb-[8px] mt-[17px] pr-[9px] pt-[6px] pl-[14px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
-              <div className="pt-[4px]">ETH Earnings</div>
-              <div className="align-top flex-row items-end ">
-                <div className="text-[#33c6ab]  text-[23px] font-normal leading-[32.2px] tracking-[.1px] text-end">1.779</div>
+            <div className="flex justify-between text-[#9b9ca1] mt-[17px] pb-[8px] pr-[9px] pt-[6px] pl-[13.5px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+              <div className="pt-[4.5px]">ETH Earnings</div>
+              <div className="align-top flex-row items-end pt-[0.5px] pr-[0.9px]">
+                <div className="text-right text-[23px] font-normal leading-[32.5px] text-[#33c6ab] ">1.779</div>
                 <div className=" leading-[22.4px] mr-0 text-right">$3,182.63</div>
               </div>
             </div>
 
 
             <div className="pl-[3px] pt-[7px] text-start"><span className="text-[12px] text-[#9b9ca1] ">unStaking before unlock incurs a early withdraw fee</span></div>
-            <div className="flex flex-row justify-between mt-[12px]">
+            <div className="flex flex-row justify-between mt-[11.9px]">
               <div>
-                <p className="text-xs text-[#9b9ca1] text-center mb-[5px]">Locks for 4 days</p>
+                <p className="text-xs text-[#9b9ca1] text-center mb-[5px] mr-[2.5px]">Locks for 4 days</p>
                 <p className='w-[135px] text-[#fbfbfb] py-[12px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>Stake</p>
               </div>
               <div>
                 <p className="text-xs text-[#9b9ca1] text-center mb-[5px]">01:06:25:06</p>
-                <p className='w-[135px] text-[#fbfbfb] py-[12px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>unStake</p>
+                <p className='w-[135px] text-[#fbfbfb] py-[11.9px] bg-[#3b3b3b3e] border-2 border-[#9A9BA11C] rounded-[64px] text-center hover:bg-[#303030] duration-300 cursor-pointer'>unStake</p>
               </div>
             </div>
-            <div className="flex relative mt-[17px]  w-[294px] h-[62px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
-              <div className="absolute w-[294px]  overflow-hidden rounded-[188px] h-[59px] " style={{ zIndex: '5' }}>
+            <div className="flex relative mt-[15px]  w-[294px] h-[63px] justify-center items-center cursor-pointer animate-btn" onClick={() => open()}>
+              <div className="absolute w-[294px]  overflow-hidden rounded-[188px] h-[59px]  border-[1px] border-[#303030]" style={{ zIndex: '5' }}>
                 <div className="relative" >
                   <div
-                    className="absolute w-[184px] h-[39px] ml-[75px] mt-1 animate-div"
+                    className="absolute w-[184px] h-[40px] ml-[75px] mt-1 animate-div"
                     style={style2}
                   >
 
@@ -163,10 +157,10 @@ export default function Lpstake() {
                 onMouseOver={(e) => { handleMouseover(e); handleMouseover2(e); }}
                 onMouseLeave={(e) => { handleMouseLeave(); handleMouseLeave2() }}></div>
 
-              <div className="absolute w-[290px] h-[58px] p-[2px] z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
+              <div className="absolute w-[289px] h-[55px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
 
 
-              <p className="relative text-[18px] text-[#33c6ab] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
+              <p className="relative text-[18px] text-[#B0B0B0] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Claim ETH"}</p>
             </div>
           </div>
         </div>

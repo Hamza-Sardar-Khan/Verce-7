@@ -28,12 +28,12 @@ export default function Lpclaim() {
     const ydif = 0 - temp[1];
 
     const style: any = {
-      // background: 'radial-gradient(60% 60% at 50% 50%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)', 
+      background: 'radial-gradient(30% 50% at 50% 40%, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%)', 
       filter: 'blur(15px)',
       zIndex: '10',
       animationPlayState: 'paused',
-      transform: `translate(${xdif}px, ${ydif}px) scale(1.8, 1.2)`,
-      transition: 'transform 0.5s, background 2s linear 2s'
+      transform: `translate(${xdif}px, ${ydif}px) scale(2, 1.7)`,
+      transition: 'transform 0.5s, background 0.5s linear 0.5s'
     }
     setStyle(style)
   }
@@ -44,7 +44,7 @@ export default function Lpclaim() {
       filter: 'blur(15px)',
       zIndex: '10',
       animationPlayState: 'running',
-      transition: 'transform 1s'
+      transition: 'transform 0.5s'
     }
     setStyle(style)
   }
@@ -66,8 +66,8 @@ export default function Lpclaim() {
       filter: 'blur(5px)',
       zIndex: '10',
       animationPlayState: 'paused',
-      transform: `translate(${xdif2}px, ${ydif2}px) scale(3.8, 3.2)`,
-      transition: 'transform 0.5s, background 2s linear 2s'
+      transform: `translate(${xdif2}px, ${ydif2}px) scale(3.8, 5.8)`,
+      transition: 'transform 1s, background 2s linear 2s'
     }
     setStyle2(style2)
   }
@@ -88,34 +88,36 @@ export default function Lpclaim() {
   }
 
   return (
-    <main>
+    <main className="  top-[127px]" >
       <div className='flex justify-center pt-20 pb-40 sm:pb-0 overflow-visible z-20'>
         <div className="w-[330px] h-[374px] rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md">
-          <div className="flex justify-between pl-[18px] pr-[16px] pt-[18px] pb-[5px] border-b-[1px] border-[#9A9BA11C]">
+          <div className="flex justify-between pl-[18px] pr-[16px] pt-[19.2px] pb-[4.3px] border-b-[1px] border-[#9A9BA11C]">
             <div className="text-white text-[26px] pl-[7px] ">LP Claim</div>
-            <div className="text-[#9b9ca1] pt-[9px] ">
-              <div className="text-[18px] leading-[25px] ">Block-WETH</div>
+            <div className="text-[#9b9ca1] pt-[10.5px] ">
+              <div className="text-[18px] leading-[24.2px] ">Block-WETH</div>
               <div className="flex justify-end text-[16px]">$65.22</div>
             </div>
           </div>
 
 
           <div className="p-[19px] pr-[16px] pt-[17px]">
-            <div className="flex justify-between text-[#9b9ca1] pb-[8px] pr-[9px] pt-[6px] pl-[13px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
+            <div className="flex justify-between text-[#9b9ca1] pb-[7.2px] pr-[9px] pt-[6.5px] pl-[13px] bg-[#3b3b3b2e] rounded-2xl border border-[#9A9BA11C]">
               <div className="pt-[4.3px]">Current LP Balance</div>
-              <div className="align-top flex-row items-end pt-[1px]">
-                <div className="text-white text-[23px] font-normal leading-[32.2px] tracking-[.1px]">24.321</div>
-                <div className=" leading-[22.8px] mr-0 text-right pt-[0.5px] ">$1,586.21</div>
+         
+
+              <div className="pt-[.3px]">
+                <div className=" text-[23px] font-normal leading-[32.2px] text-white text-end ">24.321</div>
+                <div className=" leading-[22.7px] text-right mr-0  pt-[0.5px]">$1,586.21</div>
               </div>
             </div>
 
 
 
-            <div className="flex justify-between text-[#9b9ca1] pb-[8px] pr-[9px] pt-[6px] pl-[13px] bg-[#3b3b3b2e] rounded-2xl mt-[19px] border border-[#9A9BA11C]">
+            <div className="flex justify-between text-[#9b9ca1] pb-[7px] pr-[9px] pt-[6.5px] pl-[13px] bg-[#3b3b3b2e] rounded-2xl mt-[19px] border border-[#9A9BA11C]">
               <div className="pt-[4.3px]">Claimable LP</div>
-              <div className="pt-[1px]">
-                <div className=" text-[23px] font-normal leading-[33px] text-[#33c6ab] text-end tracking-[.1px]">54.146</div>
-                <div className=" leading-[22.8px] text-right mr-0  pt-[0.5px]">$3,531.40</div>
+              <div className="pt-[.5px]">
+                <div className=" text-[23px] font-normal leading-[32.2px] text-[#33c6ab] text-end ">54.146</div>
+                <div className=" leading-[22.7px] text-right mr-0  pt-[0.5px]">$3,531.40</div>
               </div>
             </div>
 
@@ -142,8 +144,8 @@ export default function Lpclaim() {
 
               </div>
 
-              <div className="absolute w-[290px] h-[52px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
-              <p className="relative  text-[18px] text-[#33c6ab] tracking-[.2px] font-medium  z-30 pointer-events-none" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Connect Wallet"}</p>
+              <div className="absolute w-[290px] h-[50px]  z-15 rounded-[72px] bg-[#161616] pointer-events-none" style={{ zIndex: '15' }}></div>
+              <p className="relative  text-[18px] text-[#B0B0B0]  font-medium  z-30 pointer-events-none tracking-[.2px]" style={{ zIndex: '30' }} >{isConnected ? reducedAddress(address) : "Connect Wallet"}</p>
             </div>
           </div>
         </div>
