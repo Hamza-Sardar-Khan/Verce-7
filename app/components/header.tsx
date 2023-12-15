@@ -17,7 +17,7 @@ createWeb3Modal({
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [headerStyle, setHeaderStyle] = useState({});
-    const [logoStyle, setLogoStyle] = useState({});
+   
     const router = useRouter()
     const pathname = usePathname();
 
@@ -30,13 +30,10 @@ export default function Header() {
             zIndex: '50',
 
         }
-        const logoStyle = {
-            trasnform: 'translate3d(100px, 0, 0)',
-            transition: 'transform 2s linear 2s'
-        }
+       
 
         setHeaderStyle(headerStyle)
-        setLogoStyle(logoStyle)
+       
     };
 
     const navigateTo = (path: string) => {
@@ -51,21 +48,21 @@ export default function Header() {
     return (
         <header className={`${isOpen
             ? ` absolute flex flex-col items-center backdrop-blur-[3.5px] transition duration-500 linear `
-            : 'fixed w-full backdrop-blur-[3.5px] z-10 h-[92px]'
+            : 'fixed w-full backdrop-blur-[3.5px] z-10  h-[82px] md:h-[92px]'
             }`} style={headerStyle}>
             <div
                 className={
                     isOpen ?
-                        `transition-all duration-500 ease h-[100vh] w-[100vw] sm:w-auto justify-center px-5 md:px-10 py-[0px] md:py-[2px] flex border border-[#161616] bg-[#0F0F0F] ` :
-                        'transition-all duration-500 flex h-[82px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-[40px] py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
+                        `transition-height duration-500 ease h-[100vh] w-[100vw] sm:w-auto justify-center px-5 md:px-10 py-[0px] md:py-[2px] flex border border-[#161616] bg-[#0F0F0F] ` :
+                        ' transition-height duration-500 flex h-[82px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-[40px] py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
                 <div
                     className={
                         isOpen ?
-                            `transition-all duration-500  h-[82px] md:h-[91px] flex justify-between  items-center w-[100vw]  xs:px-[10vw] sm:px-[30vw] ` :
-                            'transition-all  duration-500  h-[82px] md:h-[89.5px] flex justify-between  items-center  w-[100vw] '}>
+                            `transition-height duration-500  h-[82px] md:h-[91px] flex justify-between  items-center w-[100vw]  xs:px-[10vw] sm:px-[30vw] ` :
+                            ' transition-height  duration-500  h-[82px] md:h-[89.5px] flex justify-between  items-center  w-[100vw] '}>
 
                     <a href="/">
-                        <div className='logo opacity-80 transition-all duration-500 cursor-pointer' style={logoStyle}>
+                        <div className='logo opacity-80 transition-all duration-500 cursor-pointer' >
                             <Image
                                 width={124}
                                 height={33}

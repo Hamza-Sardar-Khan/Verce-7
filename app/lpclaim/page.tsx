@@ -89,7 +89,7 @@ export default function Lpclaim() {
 
   return (
     <main className="  top-[127px]" >
-      <div className='flex justify-center pt-20 pb-40 sm:pb-0 overflow-visible z-20'>
+      <div className='flex justify-center pt-20 pb-40 sm:pb-0 overflow-hidden z-20'>
         <div className="w-[330px] h-[374px] rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md">
           <div className="flex justify-between pl-[18px] pr-[16px] pt-[19.2px] pb-[4.3px] border-b-[1px] border-[#9A9BA11C]">
             <div className="text-white text-[26px] pl-[7px] ">LP Claim</div>

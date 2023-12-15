@@ -87,7 +87,7 @@ export default function Lpstake() {
   }
   return (
     <main className="top-[64px]">
-      <div className='flex justify-center pt-20 pb-40 sm:pb-0 '>
+      <div className='flex justify-center pt-20 pb-40 sm:pb-0 overflow-hidden '>
         <div className="w-[330px]  rounded-[28px] bg-[#161616] border border-[#9A9BA11C] shadow-md mb-28">
 
         <div className="flex justify-between pl-[18px] pr-[16px] pt-[19.7px] pb-[4.3px] border-b-[1px] border-[#9A9BA11C]">
