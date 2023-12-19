@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="bg-[#0f0f0f] " >
         <Header />
         <div className=" bg-contain   bg-center sm:bg-top  bg-no-repeat" id='custom' style={{backgroundImage: "url('/back_img.png')",
-      backgroundPosition: '-10px 38px'
+      backgroundPosition: '-7px -56.5px'
       }}>
         {children}
         </div>

@@ -54,7 +54,7 @@ export default function Header() {
                 className={
                     isOpen ?
                         `transition-height duration-500 ease h-[100vh] w-[100vw] sm:w-auto justify-center px-5 md:px-10 py-[0px] md:py-[2px] flex border border-[#161616] bg-[#0F0F0F] ` :
-                        ' transition-height duration-500 flex h-[82px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-[40px] py-[0px] md:py-[0px] border border-[#161616] backdrop-blur-[9.5px]'}>
+                        ' transition-height duration-500 flex h-[82px] md:h-[91px] w-[100vw] sm:w-auto justify-between  px-5 md:px-[40px] py-[0px] md:py-[0px] backdrop-blur-[9.5px]'}>
                 <div
                     className={
                         isOpen ?
@@ -62,7 +62,7 @@ export default function Header() {
                             ' transition-height  duration-500  h-[82px] md:h-[89.5px] flex justify-between  items-center  w-[100vw] '}>
 
                     <a href="/">
-                        <div className='logo opacity-80 transition-all duration-500 cursor-pointer' >
+                        <div className='logo opacity-80 transition-all duration-500 cursor-pointer pt-1' >
                             <Image
                                 width={124}
                                 height={33}
