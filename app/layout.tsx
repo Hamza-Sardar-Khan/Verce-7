@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Header from './components/header'
 import './globals.css'
 import "@fontsource/dm-sans";
+import Image from 'next/image';
 // import './utils/utils'
 
 
@@ -18,14 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#0f0f0f] " >
+<body className="bg-[#0f0f0f] bg-[url('/back_img.png')] bg-contain bg-no-repeat" style={{backgroundPosition: '-3px -53px' }}>
+
+      
         <Header />
-        <div className=" bg-contain   bg-center sm:bg-top  bg-no-repeat" id='custom' style={{backgroundImage: "url('/back_img.png')",
-      backgroundPosition: '-7px -56.5px'
-      }}>
         {children}
-        </div>
-       
       </body>
     </html>
   )
